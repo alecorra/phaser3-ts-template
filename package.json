@@ -1,0 +1,40 @@
+{
+  "name": "phaser3-ts-parcel-template",
+  "version": "1.0.0",
+  "description": "A typescript template project for Phaser 3 using TypeScript and Parceljs",
+  "scripts": {
+    "start": "parcel src/index.html -p 3000",
+    "build": "parcel build src/index.html --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
+    "isready": "npm run format && npm run lint && npm run build"
+  },
+  "author": "alecorra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alecorra/phaser3-ts-template.git"
+  },
+  "homepage": "https://github.com/alecorra/phaser3-ts-template",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "minimist": ">=1.2.2",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "prettier": "^2.2.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "phaser": "^3.50.1"
+  },
+  "parcelCleanPaths": [
+    "dist"
+  ],
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  }
+}
